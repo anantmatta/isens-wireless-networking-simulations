@@ -1,0 +1,111 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="mat-itu_plasterboard" name="mat-itu_plasterboard">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.439800 0.392700 0.301800" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.305573"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_wood" name="mat-itu_wood">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.470900 0.147700 0.181300" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.305573"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_glass" name="mat-itu_glass">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.193800 0.563900 0.760400" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.305573"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="mat-itu_metal" name="mat-itu_metal">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.306500 0.435700 0.504300" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.305573"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+
+<!-- Emitters -->
+
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-walls_obj" name="mesh-walls_obj">
+		<string name="filename" value="meshes/walls_obj.ply"/>
+		<ref id="mat-itu_plasterboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-facric_obj" name="mesh-facric_obj">
+		<string name="filename" value="meshes/facric_obj.ply"/>
+		<ref id="mat-itu_wood" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-glass_tv_obj" name="mesh-glass_tv_obj">
+		<string name="filename" value="meshes/glass_tv_obj.ply"/>
+		<ref id="mat-itu_glass" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-metal_obj" name="mesh-metal_obj">
+		<string name="filename" value="meshes/metal_obj.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-plastic_obj" name="mesh-plastic_obj">
+		<string name="filename" value="meshes/plastic_obj.ply"/>
+		<ref id="mat-itu_plasterboard" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-whiteboards_obj" name="mesh-whiteboards_obj">
+		<string name="filename" value="meshes/whiteboards_obj.ply"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-wood_obj" name="mesh-wood_obj">
+		<string name="filename" value="meshes/wood_obj.ply"/>
+		<ref id="mat-itu_wood" name="bsdf"/>
+	</shape>
+
+<!-- Volumes -->
+
+</scene>
